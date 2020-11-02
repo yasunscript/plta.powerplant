@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('/login', 'Auth\LoginController@login');
 Route::group(['middleware' => 'auth:api'], function () {
     Route::get('user-authenticated', 'API\UserController@getUserLogin')->name('user.authenticated');
+    Route::get('user-lists', 'API\UserController@userLists')->name('user.index');
 
     // Dashboard Pembankit
     Route::get('dashboard-pembangkittotal', 'API\DashboardController@getPembangkitTotal');
@@ -31,4 +32,12 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::get('penyaluran-metering', 'API\PenyaluranController@getMeteringData');
 
     Route::get('report-produksi', 'API\ReportController@getProduksiData');
+
+    Route::get('users', 'API\UserController@index');
+    Route::delete('users/{user}', 'API\UserController@destroy');
+    Route::get('roles', 'API\RolePermissionController@getAllRole');
+    Route::get('permissions', 'API\RolePermissionController@getAllPermission')->name('permission');
+    Route::post('role-permission', 'API\RolePermissionController@getRolePermission')->name('role_permission');
+    Route::post('set-role-permission', 'API\RolePermissionController@setRolePermission')->name('set_role_permission');
+    Route::post('set-role-user', 'API\RolePermissionController@setRoleUser')->name('user.set_role');
 });

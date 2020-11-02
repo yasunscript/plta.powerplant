@@ -7,6 +7,9 @@ import Home from "./pages/Home.vue";
 import Pembangkit from "./pages/Pembangkit.vue";
 import Penyaluran from "./pages/Penyaluran.vue";
 import Report from "./pages/Report.vue";
+import Setting from './pages/setting/Index.vue'
+import SetPermission from './pages/setting/roles/SetPermission.vue'
+import IndexUser from './pages/setting/users/index.vue'
 
 Vue.use(Router);
 
@@ -14,6 +17,25 @@ const router = new Router({
     mode: "history",
     linkActiveClass: "active",
     routes: [
+        {
+            path: '/setting',
+            component: Setting,
+            meta: { requiresAuth: true },
+            children: [
+                {
+                    path: 'role-permission',
+                    name: 'role.permissions',
+                    component: SetPermission,
+                    meta: { title: 'Set Permissions' }
+                },
+                {
+                    path: 'users',
+                    name: 'users',
+                    component: IndexUser,
+                    meta: { title: 'Users' }
+                },
+            ]
+        },
         {
             path: "/",
             name: "home",

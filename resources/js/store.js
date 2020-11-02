@@ -26,7 +26,13 @@ const store = new Vuex.Store({
     getters: {
         isAuth: state => {
             return state.token != "null" && state.token != null;
-        }
+        },
+        isCan: (state, permissionName)=> {
+            let Permission = state.user.authenticated.permission
+            if (typeof Permission != 'undefined') {
+                return Permission.indexOf(permissionName) !== -1;
+            }
+        },
     },
     mutations: {
         SET_TOKEN(state, payload) {

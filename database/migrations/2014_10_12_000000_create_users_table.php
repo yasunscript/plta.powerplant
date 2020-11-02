@@ -13,19 +13,21 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('username')->unique();
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->string('photo')->nullable();
-            $table->string('api_token')->nullable();
-            $table->char('role', 1)->comment('0: superadmin, 1: admin, 2: user');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('users')) {
+            Schema::create('users', function (Blueprint $table) {
+                $table->id();
+                $table->string('name');
+                $table->string('username')->unique();
+                $table->string('email')->unique();
+                $table->timestamp('email_verified_at')->nullable();
+                $table->string('password');
+                $table->rememberToken();
+                $table->string('photo')->nullable();
+                $table->string('api_token')->nullable();
+                $table->char('role', 1)->comment('0: superadmin, 1: admin, 2: user');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

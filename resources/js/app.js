@@ -5,8 +5,10 @@ import router from "./router.js";
 import store from "./store.js";
 import App from "./App.vue";
 import BootstrapVue from "bootstrap-vue";
+import Permissions from './mixins/Permission.js'
 
 Vue.use(BootstrapVue);
+Vue.mixin(Permissions);
 
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import { mapActions, mapGetters, mapState } from "vuex";

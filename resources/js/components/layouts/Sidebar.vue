@@ -37,23 +37,38 @@
                             <p>Dashboard</p>
                         </router-link>
                     </li>
-                    <li class="nav-item">
+                    <li v-if="$can('read pembangkit')" class="nav-item">
                         <router-link :to="{ name: 'pembangkit' }" class="nav-link">
                             <i class="nav-icon fas fa-cogs yellow"></i>
                             <p>Pembangkit</p>
                         </router-link>
                     </li>
-                    <li class="nav-item">
+                    <li v-if="$can('read penyaluran')" class="nav-item">
                         <router-link :to="{ name: 'penyaluran' }" class="nav-link">
                             <i class="nav-icon fas fa-broadcast-tower indigo"></i>
                             <p>Penyaluran</p>
                         </router-link>
                     </li>
-                    <li class="nav-item">
+                    <li v-if="$can('read report')" class="nav-item">
                         <router-link :to="{ name: 'report' }" class="nav-link">
                             <i class="nav-icon fas fa-chart-bar green"></i>
                             <p>Report</p>
                         </router-link>
+                    </li>
+                    <!--                    -->
+
+                    <li class="nav-item has-treeview" v-if="authenticated.role == 0">
+                        <a href="#" class="nav-link" :class="{ active: $route.name === 'role.permissioins' }">
+                            <i class="nav-icon fas fa-table"></i>
+                            <p>
+                                Setting
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview" >
+                            <li class="nav-item"><router-link class="nav-link" :to="{name: 'role.permissions'}"><i class="far fa-circle nav-icon"></i>Role Permission</router-link></li>
+                            <li class="nav-item"><router-link class="nav-link" :to="{name: 'users'}"><i class="far fa-user nav-icon"></i>Users</router-link></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a href="javascript:void(0);" @click="logout" class="nav-link">
@@ -61,6 +76,7 @@
                             <p>Logout</p>
                         </a>
                     </li>
+
                 </ul>
             </nav>
         </div>
@@ -70,10 +86,12 @@
 <script>
 import { mapState } from "vuex";
 export default {
+
     computed: {
         ...mapState("user", {
             authenticated: state => state.authenticated
         })
+
     },
     methods: {
         logout() {
