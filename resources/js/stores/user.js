@@ -136,6 +136,14 @@ const actions = {
             });
         });
     },
+    getUserById({ commit }, payload) {
+        return new Promise((resolve, reject) => {
+            $axios.get(`users/`+payload+`/edit`).then(response => {
+                commit("ASSIGN_USER", response.data);
+                resolve(response.data);
+            });
+        });
+    },
     deleteUser({commit}, payload) {
         console.log(payload)
         return new Promise((resolve, reject) => {

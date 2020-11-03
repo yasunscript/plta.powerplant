@@ -34,6 +34,7 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::get('report-produksi', 'API\ReportController@getProduksiData');
 
     Route::get('users', 'API\UserController@index');
+    Route::get('users/{user}/edit', 'API\UserController@edit');
     Route::delete('users/{user}', 'API\UserController@destroy');
     Route::get('roles', 'API\RolePermissionController@getAllRole');
     Route::get('permissions', 'API\RolePermissionController@getAllPermission')->name('permission');

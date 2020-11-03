@@ -2,7 +2,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">DataTable with default features</h3>
+                    <h3 class="card-title">Data List Users</h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -10,13 +10,13 @@
                         :items="datas"
                         :fields="fields"
                         :meta="meta"
-                        :editUrl="'/users/edit/'"
-                        :title="'Delete Posts'"
+                        :title="'Delete Users'"
                         @per_page="handlePerPage"
                         @pagination="handlePagination"
                         @search="handleSearch"
                         @sort="handleSort"
                         @delete="handleDelete"
+                        @edit="handleEdit"
                     />
                 </div>
                 <!-- /.card-body -->
@@ -113,6 +113,9 @@ export default {
             this.deleteUser(val).then((response) => {
                 this.loadPostsData()
             })
+        },
+        handleEdit(val) {
+            this.$router.push({ name: 'users.edit', params: {userId:val.item.id } })
         }
     }
 }

@@ -36,7 +36,7 @@
                 <!-- TAMBAHKAN CODE INI -->
                 <template v-slot:cell(actions)="row">
                     <!-- TOMBOL EDIT HANYA AKAN DITAMPILKAN, JIKA PROPS DARI editUrl ADA VALUENYA -->
-                    <a :href="editUrl" v-if="editUrl" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="#" @click="openEditUrl(row)" class="btn btn-warning btn-sm">Edit</a>
                     <!-- TOMBOL DELETE AKAN MEMBUKA MODAL KONFIRMASI -->
                     <button class="btn btn-danger btn-sm" @click="openDeleteModal(row)">Delete</button>
                 </template>
@@ -146,6 +146,9 @@ export default {
         }
     },
     methods: {
+        openEditUrl(row){
+            this.$emit('edit', row)
+        },
         openDeleteModal(row) {
             this.deleteModal = true
             this.selected = row.item

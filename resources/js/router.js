@@ -10,6 +10,7 @@ import Report from "./pages/Report.vue";
 import Setting from './pages/setting/Index.vue'
 import SetPermission from './pages/setting/roles/SetPermission.vue'
 import IndexUser from './pages/setting/users/index.vue'
+import EditUser from './pages/setting/users/edit.vue'
 
 Vue.use(Router);
 
@@ -33,6 +34,12 @@ const router = new Router({
                     name: 'users',
                     component: IndexUser,
                     meta: { title: 'Users' }
+                },
+                {
+                    path: 'users/:userId/edit',
+                    name: 'users.edit',
+                    component: EditUser,
+                    meta: { title: 'Edit Users' }
                 },
             ]
         },

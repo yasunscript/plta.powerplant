@@ -22,6 +22,12 @@ class UserController extends Controller
         return response()->json(['status' => 'success', 'data' => $users]);
     }
 
+    public function edit($id)
+    {
+        $user = User::find($id);
+        return response()->json(['status' => 'success', 'data'=>$user]);
+    }
+
     public function destroy($id)
     {
         $user = User::find($id);

@@ -57,7 +57,7 @@
                     </li>
                     <!--                    -->
 
-                    <li class="nav-item has-treeview" v-if="authenticated.role == 0">
+                    <li class="nav-item has-treeview" v-if="$can('read roles')">
                         <a href="#" class="nav-link" :class="{ active: $route.name === 'role.permissioins' }">
                             <i class="nav-icon fas fa-table"></i>
                             <p>

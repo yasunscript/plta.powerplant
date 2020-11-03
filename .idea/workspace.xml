@@ -20,37 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dad8f4e-abee-4230-bc79-9a480b8ee6b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/plta.powerplant.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/API/RolePermissionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/UserCollection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_31_033625_create_permission_tables.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/layouts/DataTable.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/mixins/permission.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/pages/setting/Index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/pages/setting/roles/SetPermission.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/pages/setting/users/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/pages/setting/users/edit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/layouts/DataTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/layouts/DataTable.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/layouts/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/layouts/Sidebar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/setting/users/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/setting/users/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/stores/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/stores/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
@@ -219,6 +196,9 @@
       <workItem from="1604020932473" duration="1330000" />
       <workItem from="1604115246199" duration="7823000" />
       <workItem from="1604269429228" duration="5889000" />
+      <workItem from="1604284955682" duration="9000" />
+      <workItem from="1604312344453" duration="4363000" />
+      <workItem from="1604356753944" duration="36000" />
     </task>
     <servers />
   </component>
@@ -253,9 +233,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="429" y="191" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1604272562559" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1604271068672">
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1604321135675">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1604271068672" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1604321135675" />
   </component>
 </project>
